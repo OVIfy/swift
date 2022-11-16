@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Overpass:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,500;1,600&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root{
+    --darkBlue : #2B4C9A;
+    --lightBlue : #5076d0;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mobile{
+    display: none;
+}
+
+
+.container{
+    min-height: 100vh;
+}
+.header-container{
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#drop-down{
+    width: 35px;
+    height: 35px;
+}
+#drop-down:hover{
+    cursor: pointer;
+}
+#logo{
+    width: 150px;  
+}
+.menu{
+
+}
+li.menu-item{
+    list-style: none;
+}
+.menu-item{
+    display: inline-block;
+    margin: 0px 8px;
+}
+
+a{
+    
+    color: var(--darkBlue);
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration:none;  
+    /* display:block; */
+}
+a::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    border-radius: 2px;
+    left: 0px;
+    bottom: -5px;
+    background-color: var(--lightBlue);
+    transition: all 0.2s ease-in-out;
+}
+a:hover{
+    color:var(--lightBlue);
+    position: relative;
+}
+a:hover::after{
+    width: 100%;
+}
+.login-btn{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-left: 40px;
+    padding: 8px 20px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    background: var(--darkBlue);
+    color: #ffff;
+    transition: all 0.2s ease-in-out;
+
+}
+.login-btn:hover{
+    background-color: var(--lightBlue);
+    cursor: pointer;
+ }
+ /*--------- hero ------------*/
+ .hero{
+     display: flex;
+     flex-wrap: wrap;
+     margin-left: 80px;
+     margin-right: 80px;
+     margin-top: 30px;
+ }
+ .hero-text, .hero-image{
+     flex-basis: 50%;
+ }
+ .hero-image img{
+     width: 100%;
+ }
+ .hero-text{
+     margin-top: 50px;
+ }
+ .hero-text h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 45px;
+    color:  var(--darkBlue);
+    font-weight: 700;
+ }
+ .hero-text p{
+    font-family: 'Ubuntu';
+    font-size: 16px;
+    color:  var(--darkBlue);
+    font-weight: 500; 
+    padding-top: 10px;
+    line-height: 22px;
+ }
+ #serve{
+     padding-top: 2px;
+ }
+ .deliver-btn{
+    padding: 15px 28px;
+    border-radius: 18px;
+    outline: none;
+    border: none;
+    background: var(--darkBlue);
+    color: #ffff;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;;
+    font-weight: 500;
+    margin-top: 35px;
+    transition: all 0.2s ease-in-out;
+ }
+ .deliver-btn:hover{
+    background-color: var(--lightBlue);
+    cursor: pointer;
+}
+ /*----------------- Best Delivery ---------------*/
+
+ .best-delivery{
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 70px;
+    justify-content: center;
+ }
+.delivery-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.delivery-text, .delivery-image{
+    flex-basis: 50%;
+}
+.delivery-image img{
+    width: 100%;
+}
+.delivery-text{
+    margin-top: 80px;
+}
+.delivery-text h2{
+    font-family: 'Ubuntu', sans-serif;;
+    font-size: 40px;
+    color:  var(--darkBlue);
+    font-weight: 700;
+}
+.delivery-text p{
+    font-family: 'Ubuntu', sans-serif;;
+    font-size: 16px;
+    color:  var(--darkBlue);
+    font-weight: 500; 
+    padding-top: 10px;   
+}
+/* ------choose a delivery ---------------*/
+
+.choose-delivery{
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 70px;
+    justify-content: center;
+ }
+ .choose-delivery h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    color:  var(--darkBlue);
+    font-weight: 700;
+    text-align: center;  
+ }
+ .choose-delivery p{
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;;
+    font-size: 16px;
+    color:  var(--darkBlue);
+    font-weight: 500; 
+    padding-top: 10px;  
+ }
+.choose-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px 5px;
+    grid-gap: 15px;
+}
+.choose-container p{
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;;
+    font-size: 16px;
+    color:  var(--darkBlue);
+    font-weight: 600; 
+    padding-top: 10px; 
+    margin-bottom: 20px;
+}
+.delivery img{
+    width: 100%
+}
+.delivery{
+    margin-top: 30px;
+}
+/*---------------- Got a Bike -------------*/
+.got-a-bike{
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 70px;  
+}
+.got-a-bike-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*----------------partner -------------*/
+.partner{
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 70px;  
+}
+.partner-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.partner-text, .partner-image{
+    flex-basis: 50%;
+}
+.partner-image img{
+    width: 100%;
+    border-radius: 20px;
+}
+.partner-text{
+    margin-top: 80px;
+}
+.partner-text h2{
+    font-family: 'Ubuntu', sans-serif;;
+    font-size: 40px;
+    color:  var(--darkBlue);
+    font-weight: 700;
+}
+.partner-text p{
+    font-family: 'Ubuntu', sans-serif;;
+    font-size: 16px;
+    color:  var(--darkBlue);
+    font-weight: 500; 
+    padding-top: 10px;   
+}
+
+/*----------- customers reviews -------------*/
+
+#customer-reviews{
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 70px;
+    justify-content: center;
+ }
+ #customer-reviews h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    color:  var(--darkBlue);
+    font-weight: 700;
+    text-align: center;  
+ }
+.customer-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px 5px;
+    grid-gap: 15px;
+    
+}
+.customer{
+    margin-top: 30px;
+  padding: 5px;
+  
+}  
+.customer p{
+    font-family: 'Ubuntu', sans-serif;;
+    font-size: 16px;
+    color:  #ff6700;
+    font-weight: 600; 
+    padding-top: 30px; 
+    margin-bottom: 20px;
+}
+.customer h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    color:  var(--darkBlue);
+    font-weight: 700; 
+}
+.partner-with-us{
+    padding: 15px 28px;
+    border-radius: 18px;
+    outline: none;
+    border: none;
+    background: var(--darkBlue);
+    color: #ffff;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;;
+    font-weight: 500;
+    margin-top: 35px;
+}
+.partner-with-us:hover{
+    cursor: pointer;
+    background-color: var(--lightBlue);
+
+}
+
+/*----------- footer ------------*/
+hr {
+    height: 0.2px;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    width: 100%;
+    margin: 20px 0px;
+    border-top: 1px solid rgba(116, 116, 116, 0.3);
+  }
+.logo {
+    width: 200px;
+    height: 50px;
+    background: no-repeat center left -25px/180px url("./images/swift-logo-05.svg");
+  }
+  
+.footer-container {
+    flex-basis: 1400px;
+    padding: 0px 20px;
+  }
+.footer {
+    background-color: #ff6700;
+    padding: 30px 0px;
+    margin: 0px;
+    width: 100%;
+  }
+  .footer p, .footer li, .footer a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    display: inline-block;
+    color: var(--darkBlue);
+  }
+
+  .parent {
+    display: flex;
+    justify-content: center;
+  }
+  .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sci {
+    display: flex;
+  }
+  .sci .sci__icon {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 0px 5px;
+  }
+  .sci .sci__icon.facebook {
+    background: no-repeat center center url("./images/facebook.svg");
+    background-color: rgba(116, 116, 116, 0.3);
+  }
+  .sci .sci__icon.twitter {
+    background: no-repeat center center url("./images/twitter.svg");
+    background-color: rgba(116, 116, 116, 0.3);
+  }
+  .sci .sci__icon.linkden {
+    background: no-repeat center center url("./images/linkden.svg");
+    background-color: rgba(116, 116, 116, 0.3);
+  }
+  .sci .sci__icon.instagram {
+    background: no-repeat center center url("./images/insta.svg");
+    background-color: rgba(116, 116, 116, 0.3);
+  }
+  
+/*----- media Queries ----*/
+@media screen and (max-width: 800px){
+    
+  
+
+    /*---------- nav------------ */
+    a::after{
+        display: none;
+    }
+    #drop-down{
+        display: block;
+    }
+     .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* height: 0px; */
+        overflow: hidden;
+     }
+     .menu-item{
+        display: block;
+        margin: 8px 0px;
+     }
+
+     .menu-close{
+        animation: menuClose 1s ease-in forwards;
+     }
+
+     .login-btn{
+        margin: 0px;
+        transition: all 0.5s ease-in-out;
+     }
+    
+  /*--------- hero ------------*/
+  .hero{
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.hero-text, .hero-image{
+    flex-basis: 100%;
+}
+.hero-image img{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+.hero-text{
+    margin-top: 50px;
+    text-align: center;
+}
+.hero-text h1{
+   font-size: 2rem;
+}
+.hero-text p{
+   font-family: 'Ubuntu';
+   font-size: 0.875rem;
+   padding-top: 10px;
+   line-height: 22px;
+}
+#serve{
+    padding-top: 2px;
+}
+.deliver-btn{
+   padding: 15px 28px;
+   border-radius: 18px;
+   font-size: 18px;
+   margin-top: 35px;
+}
+
+/*----------------- Best Delivery ---------------*/
+
+.best-delivery{
+   margin-left: 20px;
+   margin-right:20px;
+   margin-top:-180px;
+   
+}
+.delivery-container{
+   display: block;
+}
+.delivery-text, .delivery-image{
+   flex-basis: 100%;
+}
+.delivery-image img{
+   width: 100%;
+}
+.delivery-text{
+   margin-top: 30rem;
+   text-align: center;
+}
+.delivery-text h2{
+   font-size: 2rem;
+}
+.delivery-text p{
+   font-size: 0.875rem;
+   padding-top: 10px;   
+}
+/* ------choose a delivery ---------------*/
+
+.choose-delivery{
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-top: 70px;
+}
+.choose-delivery h1{
+   font-size: 2rem;
+   color:  var(--darkBlue);
+}
+.choose-delivery p{
+   font-size: 0.875rem;
+   padding-top: 10px;  
+}
+.choose-container{
+   grid-template-columns:1fr;
+   padding: 10px 5px;
+}
+.choose-container p{
+   font-size: 0.875rem; 
+   padding-top: 10px; 
+   margin-bottom: 20px;
+}
+.delivery img{
+   width: 100%
+}
+.delivery{
+   margin-top: 30px;
+}
+/*---------------- Got a Bike -------------*/
+.got-a-bike{
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-top: -100px;  
+}
+.got-a-bike-container{
+   display: block;
+}
+
+/*----------------partner -------------*/
+.partner{
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-top: 70px;  
+}
+.partner-container{
+   display: block;
+}
+.partner-text, .partner-image{
+   flex-basis: 100%;
+}
+.partner-image img{
+   width: 100%;
+}
+.partner-text{
+   margin-top: 80px;
+}
+.partner-text h2{
+   font-size: 2rem;
+}
+.partner-text p{
+   font-size: 0.875rem;
+   padding-top: 10px;   
+}
+
+/*----------- customers reviews -------------*/
+
+#customer-reviews{
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-top: 70px;
+}
+#customer-reviews h1{
+   font-size: 2rem;;  
+}
+.customer-container{
+   grid-template-columns: 1fr;
+   padding: 10px 5px;
+   
+}
+.customer{
+   margin-top: 30px;
+ padding: 5px;
+ 
+}  
+.customer p{
+   font-size: 0.875rem;
+   padding-top: 30px; 
+   margin-bottom: 20px;
+}
+.customer h2{
+   font-size: 1rem;
+}
+.partner-with-us{
+   padding: 15px 28px;
+   border-radius: 18px;
+   font-size: 1rem;
+   margin: 35px 0px;
+}
+
+footer .logo {
+    margin: 20px 0px;
+  }
+  footer .box {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0px;
+  }
+  footer .box ul li {
+    display: block;
+    margin: 20px 0px;
+  }
+
+.desktop{
+    display: none;
+ }
+
+}
